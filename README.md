@@ -10,7 +10,10 @@ A reference implementation / seed project for the Wasteful front-ends (Waste NoB
 ```bash
 git clone https://github.com/coolaj86/waste.git
 pushd waste
-cat README.md
+
+npm install
+
+rsync -av redirects.example.json redirects.json
 ```
 
 ### 2. Clone the AngularJS Waste Frontend
