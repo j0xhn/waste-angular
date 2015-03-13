@@ -5,16 +5,14 @@
       div.pull-left(style="padding-top: 9px; padding-left: 9px; padding-bottom: 9px;")
         img.navbar-logo.img(ng-src="images/tiger-128.png"
           style="border: 2px solid black; height: 54px;")
-      a.navbar-brand(href="#/" style="padding-top: 23px; padding-left: 25px;") Loginable
+      a.navbar-brand(href="#/" style="padding-top: 23px; padding-left: 25px;") Loginable v3
       div(style="padding-top: 9px;")
         button.navbar-toggle(type='button', ng-init="navCollapsed = true", ng-click="navCollapsed = !navCollapsed")
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+          i.fa.fa-user
     #navbar-main.navbar-collapse.collapse(ng-class="!navCollapsed && 'in'")
-      ul.nav.navbar-nav.navbar-right(style="padding-top: 9px;")
+      ul.nav.navbar-nav.navbar-right
         li(ng-show="!NC.session.accounts.length")
-          a(href="", ng-click="NC.showLoginModal()") Login
+          div(ng-include="'./facades/loginable/login-v3.html'")
 
         li.dropdown(ng-show="NC.session.accounts.length")
           a#account.dropdown-toggle(data-toggle='dropdown', href='')

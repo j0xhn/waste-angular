@@ -13,18 +13,6 @@
           span.icon-bar
     #navbar-main.navbar-collapse.collapse(ng-class="!navCollapsed && 'in'")
       ul.nav.navbar-nav(style="padding-top: 9px;")
-        //-li.dropdown
-          a#themes.dropdown-toggle(data-toggle='dropdown', href='')
-            | Themes
-            span.caret
-          ul.dropdown-menu(aria-labelledby='themes')
-            li
-              a(href='../default/') Default
-            li.divider
-            li
-              a(href='../amelia/') Amelia
-            li
-              a(href='../cerulean/') Cerulean
 
         li(du-scrollspy="about", ng-if="'Home' == NC.activeTab")
           a(ng-href="#about" du-smooth-scroll) About
@@ -33,7 +21,7 @@
 
         li(ng-repeat="tab in NC.tabs", ng-class="{ active: tab.active }")
           a(ng-href="{{tab.href}}") {{ tab.title }}
-      
+
       ul.nav.navbar-nav.navbar-right(style="padding-top: 9px;")
         li(ng-show="!NC.session")
           a(href="", ng-click="NC.showLoginModal()") Login

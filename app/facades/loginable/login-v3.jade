@@ -1,11 +1,13 @@
 //- modal-dialog & model-content are containers for this template
-.auth-modal(ng-init="LC.showSecret = true;")
-  .modal-header
-    h4.modal-title Login or Create Account
+div(ng-init="LC.showSecret = true;")
+  .login-header
+    h2 Register
+    p Already have an account?
+      a &#32;Log in
     .alert(ng-if="LC.alertMessage", ng-class="{{ LC.alertType }}")
       span(ng-bind="LC.alertMessage")
 
-  .modal-body
+  .login-body
     //- Update account means show only new and required fields
     //- NOTE: upgrading from one role to another may prompt this modal to show
     //- Create account means show all required fields (same as update)
